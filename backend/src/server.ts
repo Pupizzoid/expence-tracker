@@ -57,7 +57,6 @@ const connectDB = async () => {
 };
 
 const initialize = async () => {
-  // await db.sequelize.sync();
   connectDB();
   await catchUnhandledError();
   await expressInit();

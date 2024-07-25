@@ -8,8 +8,8 @@
   },
   "lint-staged": {
     "frontend/src/**/*.{js,ts,scss,html,json}": [
-      "cd frontend && prettier --write",
-      "cd frontend && eslint --fix"
+      "npx prettier --write",
+      "npx eslint --fix"
     ],
     "backend/**/*.{js,ts}": [
       "npx prettier --write",
