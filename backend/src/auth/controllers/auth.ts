@@ -44,7 +44,4 @@ const loginHandler = requestHandler(
     });
   }
 );
-export {
-    loginHandler,
-    registerHandler
-};
+export { loginHandler, registerHandler };

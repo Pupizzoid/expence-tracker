@@ -5,7 +5,8 @@
   "scripts": {
     "build": "tsc",
     "start": "nodemon",
-    "lint": "eslint --fix . --ext .ts"
+    "lint": "eslint --fix . --ext .ts",
+    "format": "prettier --write '**/*.{js,ts,json}'"
   },
   "author": "Vita Kozlovska",
   "license": "ISC",

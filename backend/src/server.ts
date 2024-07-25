@@ -26,7 +26,7 @@ const expressInit = () => {
     res.status(404).json({ error: 'Not Found!' });
   });
 
-  // app.use(handleError);
+  app.use(handleError);
 
   app.listen(SERVER.SERVER_PORT, (): void => {
     logger.info(`Application started on port ${SERVER.SERVER_PORT} `);
@@ -35,9 +35,12 @@ const expressInit = () => {
 
 const catchUnhandledError = () => {
   process
-    .on('unhandledRejection', (reason: any, promise: Promise<any>): void => {
-      logger.error(`${reason} Unhandled Rejection at Promise: ${promise}`);
-    })
+    .on(
+      'unhandledRejection',
+      (reason: unknown, promise: Promise<unknown>): void => {
+        logger.error(`${reason} Unhandled Rejection at Promise: ${promise}`);
+      }
+    )
     .on('uncaughtException', (err: Error, origin: string): void => {
       logger.error(`Caught exception: ${err} Exception origin: ${origin}`);
       process.exit(1);

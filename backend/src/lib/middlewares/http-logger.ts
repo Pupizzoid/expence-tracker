@@ -1,4 +1,3 @@
-import { logger } from '../loggers/logger';
 import { NextFunction, Request, Response } from 'express';
 
 export const requestMiddleWare = (
